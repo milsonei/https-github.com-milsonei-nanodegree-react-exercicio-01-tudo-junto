@@ -22,7 +22,7 @@ class Util extends Component {
    */
   static showSuccessNotification(title, message) {
     notification.open({
-      message: title || 'Sucesso',
+      message: title || 'Success',
       description: message,
       icon: <Icon type="smile" style={{ color: '#108ee9' }} />,
     })
@@ -33,8 +33,8 @@ class Util extends Component {
  */
   static showInfoMessage(message){
     Modal.info({
-      title: 'Informação',
-      content: message,
+      title: message,
+      content: '' ,
       onOk() {},
     });
   };
@@ -44,8 +44,8 @@ class Util extends Component {
    */
   static showSuccessMessage (message) {
     Modal.success({
-      title: 'Sucesso!',
-      content: message,
+      title: message,
+      content: '',
     });
   };
   
@@ -55,8 +55,8 @@ class Util extends Component {
   */
   static showErrorMessage(message){
     Modal.error({
-      title: 'Erro!',
-      content: message,
+      title: message,
+      content: '',
     });
   };
   
@@ -66,8 +66,8 @@ class Util extends Component {
    */
   static showWarningMessage(message) {
     Modal.warning({
-      title: 'Alerta!',
-      content: message,
+      title: message,
+      content: '',
     });
   };
 
@@ -78,13 +78,13 @@ class Util extends Component {
    * @param {function} callbackOk Rotina a ser executada após confirmação
    * @param {function} callbackCancel Rotina a ser executada após cancelamento
    */
-   static showConfirm(title, message, callbackOk, callbackCancel) {
+   static showConfirm(message, callbackOk, callbackCancel) {
     Modal.confirm({
-      title: title,
-      content: message,
-      okText: 'Sim',
+      title: message,
+      content: '',
+      okText: 'Ok',
       okType: 'danger',
-      cancelText: 'Não',
+      cancelText: 'Cancel',
       onOk() {
         if (callbackOk) {
           callbackOk();
