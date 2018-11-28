@@ -10,7 +10,7 @@ class UserList extends React.Component {
      * @param {json} user Objeto JSON contendo os dados do usuário 
      */
     deleteUser = (user) => {
-        Util.showConfirm('Delete user', (<div>Are you sure you want delete the user <b>{user.firstName} {user.lasName}</b>?</div>), () => this.props.dataSource.delete(user));
+        Util.showConfirm((<div>Are you sure you want delete the user <b>{user.firstName} {user.lasName}</b>?</div>), () => this.props.dataSource.delete(user));
     };
     /**
      * Alterna a visibilidade do número de jogos do usuário
